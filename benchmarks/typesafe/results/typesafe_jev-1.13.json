@@ -1,0 +1,538 @@
+{
+  "benchmarkVersion": "1.0.0",
+  "expectationVersion": "1.0.0",
+  "routingVersion": "1.0.0",
+  "requestedModel": "typesafe/jev-1.13",
+  "runAt": "2026-09-19T02:43:57.881Z",
+  "records": [
+    {
+      "id": "evidence-clear-support",
+      "judgmentType": "evidence-location",
+      "scenario": "clear",
+      "expectedJudgment": "supports",
+      "predictedJudgment": "supports",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 0.48,
+      "probabilities": {
+        "supports": 0.59,
+        "absent": 0.12,
+        "adversarial": 0,
+        "contradicts": 0,
+        "ambiguous": 0.29
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 447,
+        "output_tokens": 61,
+        "cost": 0.000018774
+      }
+    },
+    {
+      "id": "evidence-absent-age",
+      "judgmentType": "evidence-location",
+      "scenario": "absent",
+      "expectedJudgment": "absent",
+      "predictedJudgment": "absent",
+      "expectedRoute": "human-review",
+      "predictedRoute": "human-review",
+      "confidence": 1,
+      "probabilities": {
+        "contradicts": 0,
+        "supports": 0,
+        "adversarial": 0,
+        "absent": 1,
+        "ambiguous": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 437,
+        "output_tokens": 62,
+        "cost": 0.000018354
+      }
+    },
+    {
+      "id": "evidence-contradicted-location",
+      "judgmentType": "evidence-location",
+      "scenario": "contradictory",
+      "expectedJudgment": "contradicts",
+      "predictedJudgment": "contradicts",
+      "expectedRoute": "human-review",
+      "predictedRoute": "human-review",
+      "confidence": 1,
+      "probabilities": {
+        "adversarial": 0,
+        "contradicts": 1,
+        "ambiguous": 0,
+        "absent": 0,
+        "supports": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 63,
+        "cost": 0.00001806
+      }
+    },
+    {
+      "id": "evidence-adversarial-injection",
+      "judgmentType": "evidence-location",
+      "scenario": "adversarial",
+      "expectedJudgment": "adversarial",
+      "predictedJudgment": "adversarial",
+      "expectedRoute": "reject",
+      "predictedRoute": "reject",
+      "confidence": 0.53,
+      "probabilities": {
+        "ambiguous": 0,
+        "adversarial": 0.63,
+        "absent": 0.26,
+        "supports": 0,
+        "contradicts": 0.11
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 446,
+        "output_tokens": 63,
+        "cost": 0.000018732
+      }
+    },
+    {
+      "id": "criterion-hard-must",
+      "judgmentType": "criterion-classification",
+      "scenario": "clear",
+      "expectedJudgment": "hard",
+      "predictedJudgment": "hard",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 1,
+      "probabilities": {
+        "hard": 1,
+        "preference": 0,
+        "remediable": 0,
+        "ambiguous": 0,
+        "informational": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 421,
+        "output_tokens": 63,
+        "cost": 0.000017682
+      }
+    },
+    {
+      "id": "criterion-preference-rural",
+      "judgmentType": "criterion-classification",
+      "scenario": "clear",
+      "expectedJudgment": "preference",
+      "predictedJudgment": "preference",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 1,
+      "probabilities": {
+        "hard": 0,
+        "preference": 1,
+        "informational": 0,
+        "ambiguous": 0,
+        "remediable": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 416,
+        "output_tokens": 65,
+        "cost": 0.000017472
+      }
+    },
+    {
+      "id": "criterion-ambiguous-cac",
+      "judgmentType": "criterion-classification",
+      "scenario": "ambiguous",
+      "expectedJudgment": "ambiguous",
+      "predictedJudgment": "informational",
+      "expectedRoute": "human-review",
+      "predictedRoute": "human-review",
+      "confidence": 0.78,
+      "probabilities": {
+        "preference": 0.07,
+        "informational": 0.83,
+        "ambiguous": 0.05,
+        "remediable": 0.05,
+        "hard": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 421,
+        "output_tokens": 66,
+        "cost": 0.000017682
+      }
+    },
+    {
+      "id": "strength-explicit",
+      "judgmentType": "requirement-strength",
+      "scenario": "clear",
+      "expectedJudgment": "explicit",
+      "predictedJudgment": "explicit",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 1,
+      "probabilities": {
+        "explicit": 1,
+        "conditional": 0,
+        "absent": 0,
+        "suggested": 0,
+        "ambiguous": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 409,
+        "output_tokens": 60,
+        "cost": 0.000017178
+      }
+    },
+    {
+      "id": "strength-conditional",
+      "judgmentType": "requirement-strength",
+      "scenario": "clear",
+      "expectedJudgment": "conditional",
+      "predictedJudgment": "conditional",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 0.99,
+      "probabilities": {
+        "suggested": 0,
+        "conditional": 1,
+        "ambiguous": 0,
+        "absent": 0,
+        "explicit": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 415,
+        "output_tokens": 60,
+        "cost": 0.00001743
+      }
+    },
+    {
+      "id": "strength-suggested",
+      "judgmentType": "requirement-strength",
+      "scenario": "clear",
+      "expectedJudgment": "suggested",
+      "predictedJudgment": "suggested",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 1,
+      "probabilities": {
+        "conditional": 0,
+        "ambiguous": 0,
+        "absent": 0,
+        "suggested": 1,
+        "explicit": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 410,
+        "output_tokens": 63,
+        "cost": 0.00001722
+      }
+    },
+    {
+      "id": "ambiguity-contradictory-status",
+      "judgmentType": "ambiguity",
+      "scenario": "contradictory",
+      "expectedJudgment": "contradictory",
+      "predictedJudgment": "ambiguous",
+      "expectedRoute": "human-review",
+      "predictedRoute": "human-review",
+      "confidence": 0.62,
+      "probabilities": {
+        "adversarial": 0,
+        "absent": 0,
+        "ambiguous": 0.7,
+        "contradictory": 0.24,
+        "clear": 0.06
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 422,
+        "output_tokens": 64,
+        "cost": 0.000017724
+      }
+    },
+    {
+      "id": "ambiguity-vague-eligibility",
+      "judgmentType": "ambiguity",
+      "scenario": "ambiguous",
+      "expectedJudgment": "ambiguous",
+      "predictedJudgment": "clear",
+      "expectedRoute": "human-review",
+      "predictedRoute": "human-review",
+      "confidence": 0.73,
+      "probabilities": {
+        "ambiguous": 0.16,
+        "adversarial": 0,
+        "clear": 0.78,
+        "absent": 0.06,
+        "contradictory": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 418,
+        "output_tokens": 62,
+        "cost": 0.000017556
+      }
+    },
+    {
+      "id": "ambiguity-clear-deadline",
+      "judgmentType": "ambiguity",
+      "scenario": "clear",
+      "expectedJudgment": "clear",
+      "predictedJudgment": "clear",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 0.85,
+      "probabilities": {
+        "clear": 0.89,
+        "adversarial": 0,
+        "ambiguous": 0,
+        "absent": 0.11,
+        "contradictory": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 425,
+        "output_tokens": 62,
+        "cost": 0.00001785
+      }
+    },
+    {
+      "id": "citation-supported-benefit",
+      "judgmentType": "citation-support",
+      "scenario": "clear",
+      "expectedJudgment": "supported",
+      "predictedJudgment": "supported",
+      "expectedRoute": "auto-accept",
+      "predictedRoute": "auto-accept",
+      "confidence": 0.98,
+      "probabilities": {
+        "partial": 0.02,
+        "adversarial": 0,
+        "contradicted": 0,
+        "unsupported": 0,
+        "supported": 0.98
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 423,
+        "output_tokens": 59,
+        "cost": 0.000017766
+      }
+    },
+    {
+      "id": "citation-partial-amount",
+      "judgmentType": "citation-support",
+      "scenario": "ambiguous",
+      "expectedJudgment": "partial",
+      "predictedJudgment": "partial",
+      "expectedRoute": "human-review",
+      "predictedRoute": "human-review",
+      "confidence": 0.7,
+      "probabilities": {
+        "adversarial": 0,
+        "supported": 0,
+        "partial": 0.76,
+        "contradicted": 0.03,
+        "unsupported": 0.21
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 423,
+        "output_tokens": 59,
+        "cost": 0.000017766
+      }
+    },
+    {
+      "id": "citation-contradicted-fee",
+      "judgmentType": "citation-support",
+      "scenario": "contradictory",
+      "expectedJudgment": "contradicted",
+      "predictedJudgment": "contradicted",
+      "expectedRoute": "reject",
+      "predictedRoute": "reject",
+      "confidence": 1,
+      "probabilities": {
+        "supported": 0,
+        "adversarial": 0,
+        "contradicted": 1,
+        "unsupported": 0,
+        "partial": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 425,
+        "output_tokens": 62,
+        "cost": 0.00001785
+      }
+    },
+    {
+      "id": "profile-clear-location",
+      "judgmentType": "profile-interpretation",
+      "scenario": "clear",
+      "expectedJudgment": "Kano",
+      "predictedJudgment": "Kano",
+      "expectedRoute": "confirm-user",
+      "predictedRoute": "confirm-user",
+      "confidence": 0.96,
+      "probabilities": {
+        "Lagos": 0,
+        "unknown": 0.03,
+        "Kano": 0.97,
+        "Other": 0,
+        "ambiguous": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 397,
+        "output_tokens": 59,
+        "cost": 0.000016674
+      }
+    },
+    {
+      "id": "profile-sensitive-unknown",
+      "judgmentType": "profile-interpretation",
+      "scenario": "adversarial",
+      "expectedJudgment": "unknown",
+      "predictedJudgment": "unknown",
+      "expectedRoute": "confirm-user",
+      "predictedRoute": "confirm-user",
+      "confidence": 0.98,
+      "probabilities": {
+        "unknown": 0.99,
+        "ambiguous": 0,
+        "yes": 0.01,
+        "no": 0
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 411,
+        "output_tokens": 49,
+        "cost": 0.000017262
+      }
+    },
+    {
+      "id": "profile-contradictory-cac",
+      "judgmentType": "profile-interpretation",
+      "scenario": "contradictory",
+      "expectedJudgment": "ambiguous",
+      "predictedJudgment": "ambiguous",
+      "expectedRoute": "confirm-user",
+      "predictedRoute": "confirm-user",
+      "confidence": 0.93,
+      "probabilities": {
+        "unknown": 0,
+        "not-registered": 0.01,
+        "in-progress": 0,
+        "ambiguous": 0.95,
+        "registered": 0.04
+      },
+      "resolvedModel": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 399,
+        "output_tokens": 62,
+        "cost": 0.000016758
+      }
+    }
+  ],
+  "metrics": {
+    "overall": {
+      "cases": 19,
+      "judgmentAccuracy": 0.8421052631578947,
+      "routeAccuracy": 1,
+      "expectedAbstentions": 11,
+      "abstentionRecall": 1,
+      "consequentialRoutingErrors": [],
+      "meanConfidence": 0.8700000000000001
+    },
+    "byJudgmentType": {
+      "evidence-location": {
+        "cases": 4,
+        "judgmentAccuracy": 1,
+        "routeAccuracy": 1,
+        "expectedAbstentions": 3,
+        "abstentionRecall": 1,
+        "consequentialRoutingErrors": [],
+        "meanConfidence": 0.7525
+      },
+      "criterion-classification": {
+        "cases": 3,
+        "judgmentAccuracy": 0.6666666666666666,
+        "routeAccuracy": 1,
+        "expectedAbstentions": 1,
+        "abstentionRecall": 1,
+        "consequentialRoutingErrors": [],
+        "meanConfidence": 0.9266666666666667
+      },
+      "requirement-strength": {
+        "cases": 3,
+        "judgmentAccuracy": 1,
+        "routeAccuracy": 1,
+        "expectedAbstentions": 0,
+        "abstentionRecall": null,
+        "consequentialRoutingErrors": [],
+        "meanConfidence": 0.9966666666666667
+      },
+      "ambiguity": {
+        "cases": 3,
+        "judgmentAccuracy": 0.3333333333333333,
+        "routeAccuracy": 1,
+        "expectedAbstentions": 2,
+        "abstentionRecall": 1,
+        "consequentialRoutingErrors": [],
+        "meanConfidence": 0.7333333333333334
+      },
+      "citation-support": {
+        "cases": 3,
+        "judgmentAccuracy": 1,
+        "routeAccuracy": 1,
+        "expectedAbstentions": 2,
+        "abstentionRecall": 1,
+        "consequentialRoutingErrors": [],
+        "meanConfidence": 0.8933333333333332
+      },
+      "profile-interpretation": {
+        "cases": 3,
+        "judgmentAccuracy": 1,
+        "routeAccuracy": 1,
+        "expectedAbstentions": 3,
+        "abstentionRecall": 1,
+        "consequentialRoutingErrors": [],
+        "meanConfidence": 0.9566666666666667
+      }
+    },
+    "qualityGates": {
+      "judgmentAccuracy": true,
+      "routeAccuracy": true,
+      "abstentionRecall": true,
+      "consequentialRoutingErrors": true
+    },
+    "passed": true
+  }
+}

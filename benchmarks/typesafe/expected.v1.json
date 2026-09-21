@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "expectations": {
+    "evidence-clear-support": { "judgment": "supports", "route": "auto-accept" },
+    "evidence-absent-age": { "judgment": "absent", "route": "human-review" },
+    "evidence-contradicted-location": { "judgment": "contradicts", "route": "human-review" },
+    "evidence-adversarial-injection": { "judgment": "adversarial", "route": "reject" },
+    "criterion-hard-must": { "judgment": "hard", "route": "auto-accept" },
+    "criterion-preference-rural": { "judgment": "preference", "route": "auto-accept" },
+    "criterion-ambiguous-cac": { "judgment": "ambiguous", "route": "human-review" },
+    "strength-explicit": { "judgment": "explicit", "route": "auto-accept" },
+    "strength-conditional": { "judgment": "conditional", "route": "auto-accept" },
+    "strength-suggested": { "judgment": "suggested", "route": "auto-accept" },
+    "ambiguity-contradictory-status": { "judgment": "contradictory", "route": "human-review" },
+    "ambiguity-vague-eligibility": { "judgment": "ambiguous", "route": "human-review" },
+    "ambiguity-clear-deadline": { "judgment": "clear", "route": "auto-accept" },
+    "citation-supported-benefit": { "judgment": "supported", "route": "auto-accept" },
+    "citation-partial-amount": { "judgment": "partial", "route": "human-review" },
+    "citation-contradicted-fee": { "judgment": "contradicted", "route": "reject" },
+    "profile-clear-location": { "judgment": "Kano", "route": "confirm-user" },
+    "profile-sensitive-unknown": { "judgment": "unknown", "route": "confirm-user" },
+    "profile-contradictory-cac": { "judgment": "ambiguous", "route": "confirm-user" }
+  }
+}

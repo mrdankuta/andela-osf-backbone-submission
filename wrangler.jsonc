@@ -1,0 +1,51 @@
+{
+	"name": "backbone-app",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2025-03-25",
+	"compatibility_flags": ["nodejs_als", "nodejs_compat"],
+	"assets": {
+		"directory": ".svelte-kit/cloudflare",
+		"binding": "ASSETS"
+	},
+	"observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true
+    }
+  },
+	"env": {
+		"dev": {
+			"routes": [
+				{
+					"pattern": "<your-domain>",
+					"custom_domain": true
+				}
+			],
+			"vars": {
+				"PUBLIC_SITE_URL": "https://<your-domain>",
+				"PUBLIC_CONVEX_URL": "https://<convex-project>.convex.cloud",
+				"PUBLIC_CONVEX_SITE_URL": "https://<convex-project>.convex.site"
+			}
+		},
+		"prod": {
+			"routes": [
+				{
+					"pattern": "<your-domain>",
+					"custom_domain": true
+				}
+			],
+			"vars": {
+  			"PUBLIC_SITE_URL": "https://<your-domain>",
+  			"PUBLIC_CONVEX_URL": "https://<convex-project>.convex.cloud",
+				"PUBLIC_CONVEX_SITE_URL": "https://<convex-project>.convex.site"
+			}
+		}
+	}
+}

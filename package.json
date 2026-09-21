@@ -1,0 +1,49 @@
+{
+	"name": "backbone-app",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"deploy:dev": "bun --env-file=.env.dev run build && bunx wrangler deploy --env dev",
+		"deploy:prod": "bun --env-file=.env.prod run build && bunx wrangler deploy --env prod",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"benchmark:typesafe": "node scripts/typesafe-benchmark.mjs --enforce"
+	},
+	"devDependencies": {
+		"@edge-runtime/vm": "^5.0.0",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/adapter-cloudflare": "^7.2.9",
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.63.0",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@tauri-apps/cli": "^2.11.4",
+		"@types/node": "^26.5.1",
+		"@vite-pwa/sveltekit": "^1.1.0",
+		"convex-test": "^0.0.58",
+		"svelte": "^5.56.1",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16",
+		"vitest": "^5.0.0"
+	},
+	"dependencies": {
+		"@convex-dev/agent": "^0.7.3",
+		"@convex-dev/ai-sdk-provider": "^0.1.0",
+		"@convex-dev/better-auth": "^0.12.5",
+		"@convex-dev/resend": "^0.2.8",
+		"@fontsource-variable/bricolage-grotesque": "^5.3.0",
+		"@fontsource-variable/karla": "^5.3.0",
+		"@mmailaender/convex-better-auth-svelte": "^0.8.2",
+		"@mmailaender/convex-svelte": "^0.19.1",
+		"ai": "^7.0.101",
+		"better-auth": "~1.6.15",
+		"convex": "^1.45.0",
+		"convex-svelte": "^0.14.0",
+		"wrangler": "^4.131.2"
+	}
+}

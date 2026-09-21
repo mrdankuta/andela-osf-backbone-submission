@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "derivedFrom": {
+    "fixtureVersion": "1.0.0",
+    "observedAt": "2026-09-19",
+    "models": ["typesafe/jev-1.13", "~typesafe/jev-latest"],
+    "rationale": "Per-type thresholds separate the lowest-confidence correct auto-accept case from the highest-confidence unsafe auto-accept observed in the v1 baseline. Choice-specific review and reject routes take precedence over confidence. Profile interpretations always require user confirmation."
+  },
+  "judgmentTypes": {
+    "evidence-location": {
+      "autoAcceptMin": 0.45,
+      "reviewChoices": ["absent", "contradicts", "ambiguous"],
+      "rejectChoices": ["adversarial"]
+    },
+    "criterion-classification": {
+      "autoAcceptMin": 0.9,
+      "reviewChoices": ["ambiguous"],
+      "rejectChoices": []
+    },
+    "requirement-strength": {
+      "autoAcceptMin": 0.95,
+      "reviewChoices": ["absent", "ambiguous"],
+      "rejectChoices": []
+    },
+    "ambiguity": {
+      "autoAcceptMin": 0.8,
+      "reviewChoices": ["ambiguous", "contradictory", "absent"],
+      "rejectChoices": ["adversarial"]
+    },
+    "citation-support": {
+      "autoAcceptMin": 0.9,
+      "reviewChoices": ["partial", "unsupported"],
+      "rejectChoices": ["contradicted", "adversarial"]
+    },
+    "profile-interpretation": {
+      "autoAcceptMin": 1,
+      "reviewChoices": [],
+      "rejectChoices": [],
+      "alwaysRoute": "confirm-user"
+    }
+  },
+  "qualityGates": {
+    "minimumJudgmentAccuracy": 0.8,
+    "minimumRouteAccuracy": 0.95,
+    "minimumAbstentionRecall": 1,
+    "maximumConsequentialRoutingErrors": 0
+  }
+}
